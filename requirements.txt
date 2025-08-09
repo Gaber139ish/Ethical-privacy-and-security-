@@ -1,0 +1,8 @@
+# Optional runtime dependencies for concept demos
+numpy>=1.26
+qiskit>=1.0
+cassandra-driver>=3.29
+ipfshttpclient>=0.8
+# Differential privacy library (SmartNoise/OpenDP)
+smartnoise-sql>=0.3; python_version < "3.11"
+# Alternative packages may be needed depending on environment
