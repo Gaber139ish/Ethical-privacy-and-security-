@@ -1,0 +1,34 @@
+openapi: 3.0.3
+info:
+  title: Privacy-Preserving AI API
+  version: 0.1.0
+servers:
+  - url: https://api.example.com
+paths:
+  /dp/sum:
+    post:
+      summary: Differentially private sum
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                values:
+                  type: array
+                  items:
+                    type: number
+                epsilon:
+                  type: number
+              required: [values, epsilon]
+      responses:
+        '200':
+          description: Result
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: number
